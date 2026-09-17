@@ -9,12 +9,24 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 
+	let res=""
+	for(let i=0;i<Object.keys(obj).length;i++){
+		let key=obj[i][0]
+		let values=obj[i][1]
+		while(num>values[i]){
+			res+=key
+			num-=values
+			
+		}
+		
+	}
+	return res
   //your code here
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-// console.log(convertToRoman(36));
+console.log(convertToRoman(36));
 
 
 

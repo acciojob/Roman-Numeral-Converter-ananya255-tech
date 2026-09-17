@@ -13,7 +13,7 @@ function convertToRoman(num) {
 	for(let i=0;i<Object.keys(obj).length;i++){
 		let key=obj[i][0]
 		let values=obj[i][1]
-		while(num>values[i]){
+		while(num>=values){
 			res+=key
 			num-=values
 			
